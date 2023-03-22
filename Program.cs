@@ -41,7 +41,7 @@ string[] StringRangeFilter(string[] temp, int range)
     {
         size = temp[i].Length;
 
-        if (size < range) bufer += temp[i] + " ";
+        if (size < range + 1) bufer += temp[i] + " ";
     }
 
     bufer = bufer.Trim(new char[] { ' ' });
@@ -62,7 +62,7 @@ if (valve == "1" || valve == "2") // Защита от неправильног�
 {
     int number = Convert.ToInt32(valve);
     string[] sortikol = StageSelection(number);
-    int size = 4;// указан необходимый размер фильтрации символов + 1 
+    int size = 3;// указан необходимый размер фильтрации символов + 1 
 
     sortikol = StringRangeFilter(sortikol, size);
 
